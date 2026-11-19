@@ -1,0 +1,6 @@
+{
+  "name": "JunoAi",
+  "description": "An AI-powered presentation coach to analyze scripts, rehearse with video, reduce anxiety, and prepare for audience questions.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

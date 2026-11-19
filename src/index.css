@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Outfit:wght@400;600;800&family=Space+Grotesk:wght@500;700;900&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #FFFDF7;
+  color: #111827;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  background-attachment: fixed;
+}
+
+.font-playful {
+  font-family: 'Fredoka', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes bounceHorizontal {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+.animate-bounce-horizontal {
+  animation: bounceHorizontal 1s infinite;
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes floatReverse {
+  0% { transform: translateY(0px) rotate(5deg); }
+  50% { transform: translateY(15px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(5deg); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 8s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 4s ease-in-out infinite;
+}
+
+/* Neo-Brutalist Grid Pattern */
+.bg-neo-grid {
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+}
+
+/* =========================================================
+   Dark Neon / Cyber Mode Theme Scoped Styles
+   ========================================================= */
+.theme-dark-neon,
+body.theme-dark-neon,
+html.theme-dark-neon {
+  background-color: #060A08 !important;
+  color: #E6FFF0 !important;
+  background-image: radial-gradient(rgba(0, 255, 102, 0.22) 1.5px, transparent 1.5px) !important;
+  background-size: 24px 24px !important;
+}
+
+.theme-dark-neon .bg-white,
+.theme-dark-neon [class*="bg-white"],
+.theme-dark-neon [class*="bg-[#FFFDF7]"],
+.theme-dark-neon [class*="bg-[#FFF9F2]"],
+.theme-dark-neon [class*="bg-amber-50"],
+.theme-dark-neon [class*="bg-slate-50"],
+.theme-dark-neon [class*="bg-gray-50"],
+.theme-dark-neon [class*="bg-orange-50"],
+.theme-dark-neon [class*="bg-yellow-50"] {
+  background-color: #0E1612 !important;
+  color: #F0FDF4 !important;
+}
+
+.theme-dark-neon header,
+.theme-dark-neon nav,
+.theme-dark-neon [class*="bg-amber-100"],
+.theme-dark-neon [class*="bg-slate-100"] {
+  background-color: #131E18 !important;
+  color: #DCFCE7 !important;
+}
+
+.theme-dark-neon .border-black,
+.theme-dark-neon [class*="border-black"],
+.theme-dark-neon [class*="border-slate-300"],
+.theme-dark-neon [class*="border-slate-200"],
+.theme-dark-neon [class*="border-gray-200"] {
+  border-color: #00FF66 !important;
+}
+
+.theme-dark-neon [class*="border-black/10"],
+.theme-dark-neon [class*="border-black/15"],
+.theme-dark-neon [class*="border-black/20"],
+.theme-dark-neon [class*="border-black/5"] {
+  border-color: rgba(0, 255, 102, 0.3) !important;
+}
+
+.theme-dark-neon [class*="shadow-"] {
+  box-shadow: 4px 4px 0px #00FF66, 0 0 10px rgba(0, 255, 102, 0.2) !important;
+}
+
+.theme-dark-neon .text-black,
+.theme-dark-neon [class*="text-black"],
+.theme-dark-neon [class*="text-slate-900"],
+.theme-dark-neon [class*="text-slate-800"] {
+  color: #F0FDF4 !important;
+}
+
+.theme-dark-neon [class*="text-slate-700"],
+.theme-dark-neon [class*="text-slate-600"] {
+  color: #BBF7D0 !important;
+}
+
+.theme-dark-neon [class*="text-slate-500"] {
+  color: #4ADE80 !important;
+}
+
+.theme-dark-neon input,
+.theme-dark-neon textarea,
+.theme-dark-neon select {
+  background-color: #0A120E !important;
+  color: #00FF66 !important;
+  border-color: #00FF66 !important;
+}
+
+.theme-dark-neon input::placeholder,
+.theme-dark-neon textarea::placeholder {
+  color: rgba(0, 255, 102, 0.5) !important;
+}
+
+.theme-dark-neon code,
+.theme-dark-neon pre {
+  background-color: #050B08 !important;
+  color: #00FF66 !important;
+  border-color: #00FF66 !important;
+}
+
+/* =========================================================
+   Championship Medal Theme Scoped Styles (Gold & Bronze Metallic)
+   ========================================================= */
+.theme-medal,
+body.theme-medal,
+html.theme-medal {
+  background-color: #0B0E14 !important;
+  color: #F8FAFC !important;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.22) 1.5px, transparent 1.5px) !important;
+  background-size: 24px 24px !important;
+}
+
+.theme-medal .bg-white,
+.theme-medal [class*="bg-white"],
+.theme-medal [class*="bg-[#FFFDF7]"],
+.theme-medal [class*="bg-[#FFF9F2]"],
+.theme-medal [class*="bg-amber-50"],
+.theme-medal [class*="bg-slate-50"],
+.theme-medal [class*="bg-gray-50"],
+.theme-medal [class*="bg-orange-50"],
+.theme-medal [class*="bg-yellow-50"] {
+  background-color: #121722 !important;
+  color: #F8FAFC !important;
+}
+
+.theme-medal header,
+.theme-medal nav,
+.theme-medal [class*="bg-amber-100"],
+.theme-medal [class*="bg-slate-100"] {
+  background-color: #171E2D !important;
+  color: #FFDF73 !important;
+}
+
+.theme-medal .border-black,
+.theme-medal [class*="border-black"],
+.theme-medal [class*="border-slate-300"],
+.theme-medal [class*="border-slate-200"],
+.theme-medal [class*="border-gray-200"] {
+  border-color: #D4AF37 !important; /* Championship Metallic Gold */
+}
+
+.theme-medal [class*="border-black/10"],
+.theme-medal [class*="border-black/15"],
+.theme-medal [class*="border-black/20"],
+.theme-medal [class*="border-black/5"] {
+  border-color: rgba(212, 175, 55, 0.35) !important;
+}
+
+.theme-medal [class*="shadow-"] {
+  box-shadow: 4px 4px 0px #8C6212, 0 0 12px rgba(212, 175, 55, 0.22) !important;
+}
+
+.theme-medal .text-black,
+.theme-medal [class*="text-black"],
+.theme-medal [class*="text-slate-900"],
+.theme-medal [class*="text-slate-800"] {
+  color: #F8FAFC !important;
+}
+
+.theme-medal [class*="text-slate-700"],
+.theme-medal [class*="text-slate-600"] {
+  color: #E2E8F0 !important;
+}
+
+.theme-medal [class*="text-slate-500"] {
+  color: #FFDF73 !important;
+}
+
+.theme-medal input,
+.theme-medal textarea,
+.theme-medal select {
+  background-color: #0E121B !important;
+  color: #FFDF73 !important;
+  border-color: #D4AF37 !important;
+}
+
+.theme-medal input::placeholder,
+.theme-medal textarea::placeholder {
+  color: rgba(255, 223, 115, 0.45) !important;
+}
+
+.theme-medal code,
+.theme-medal pre {
+  background-color: #080A0F !important;
+  color: #FFDF73 !important;
+  border-color: #D4AF37 !important;
+}
+
+/* =========================================================
+   Medal.tv Gaming Theme Scoped Styles (Gaming Dark & Clip Orange)
+   ========================================================= */
+.theme-medal-tv,
+body.theme-medal-tv,
+html.theme-medal-tv {
+  background-color: #0F1117 !important;
+  color: #F8FAFC !important;
+  background-image: radial-gradient(rgba(255, 85, 0, 0.22) 1.5px, transparent 1.5px) !important;
+  background-size: 24px 24px !important;
+}
+
+.theme-medal-tv .bg-white,
+.theme-medal-tv [class*="bg-white"],
+.theme-medal-tv [class*="bg-[#FFFDF7]"],
+.theme-medal-tv [class*="bg-[#FFF9F2]"],
+.theme-medal-tv [class*="bg-amber-50"],
+.theme-medal-tv [class*="bg-slate-50"],
+.theme-medal-tv [class*="bg-gray-50"],
+.theme-medal-tv [class*="bg-orange-50"],
+.theme-medal-tv [class*="bg-yellow-50"] {
+  background-color: #161822 !important;
+  color: #F8FAFC !important;
+}
+
+.theme-medal-tv header,
+.theme-medal-tv nav,
+.theme-medal-tv [class*="bg-amber-100"],
+.theme-medal-tv [class*="bg-slate-100"] {
+  background-color: #1D202C !important;
+  color: #FFA800 !important;
+}
+
+.theme-medal-tv .border-black,
+.theme-medal-tv [class*="border-black"],
+.theme-medal-tv [class*="border-slate-300"],
+.theme-medal-tv [class*="border-slate-200"],
+.theme-medal-tv [class*="border-gray-200"] {
+  border-color: #FF5500 !important; /* Medal.tv Signature Clip Orange */
+}
+
+.theme-medal-tv [class*="border-black/10"],
+.theme-medal-tv [class*="border-black/15"],
+.theme-medal-tv [class*="border-black/20"],
+.theme-medal-tv [class*="border-black/5"] {
+  border-color: rgba(255, 85, 0, 0.35) !important;
+}
+
+.theme-medal-tv [class*="shadow-"] {
+  box-shadow: 4px 4px 0px #8A1E00, 0 0 12px rgba(255, 85, 0, 0.25) !important;
+}
+
+.theme-medal-tv .text-black,
+.theme-medal-tv [class*="text-black"],
+.theme-medal-tv [class*="text-slate-900"],
+.theme-medal-tv [class*="text-slate-800"] {
+  color: #F8FAFC !important;
+}
+
+.theme-medal-tv [class*="text-slate-700"],
+.theme-medal-tv [class*="text-slate-600"] {
+  color: #E2E8F0 !important;
+}
+
+.theme-medal-tv [class*="text-slate-500"] {
+  color: #FFA800 !important;
+}
+
+.theme-medal-tv input,
+.theme-medal-tv textarea,
+.theme-medal-tv select {
+  background-color: #10121A !important;
+  color: #FFA800 !important;
+  border-color: #FF5500 !important;
+}
+
+.theme-medal-tv input::placeholder,
+.theme-medal-tv textarea::placeholder {
+  color: rgba(255, 168, 0, 0.45) !important;
+}
+
+.theme-medal-tv code,
+.theme-medal-tv pre {
+  background-color: #0B0D13 !important;
+  color: #FFA800 !important;
+  border-color: #FF5500 !important;
+}
+
+/* =========================================================
+   Accessible Large Text Mode (.text-size-large)
+   ========================================================= */
+html.text-size-large {
+  font-size: 115% !important;
+}
+
+html.text-size-large .text-\[9px\] {
+  font-size: 11.5px !important;
+}
+
+html.text-size-large .text-\[10px\] {
+  font-size: 12.5px !important;
+}
+
+html.text-size-large .text-\[11px\] {
+  font-size: 13.5px !important;
+}
+
+html.text-size-large .text-xs {
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+}
+
+html.text-size-large .text-sm {
+  font-size: 16.5px !important;
+  line-height: 1.5 !important;
+}
+
+html.text-size-large .text-base {
+  font-size: 18.5px !important;
+  line-height: 1.55 !important;
+}
+
+html.text-size-large .text-lg {
+  font-size: 21px !important;
+}
+
+html.text-size-large .text-xl {
+  font-size: 24px !important;
+}
+
+html.text-size-large .text-2xl {
+  font-size: 28px !important;
+}
+
+html.text-size-large .text-3xl {
+  font-size: 34px !important;
+}
+
+html.text-size-large .text-4xl {
+  font-size: 42px !important;
+}
+
+
